@@ -1,0 +1,3155 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAds (20090727022144)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "ads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "price" decimal, "seller_id" integer, "email" varchar(255), "img_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090727022144')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ads")[0m
+
+
+Processing AdsController#3 (for 127.0.0.1 at 2009-07-27 10:32:35) [GET]
+
+ActionController::UnknownAction (No action responded to 3. Actions: ):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+/!\ FAILSAFE /!\  Mon Jul 27 10:44:33 +0800 2009
+  Status: 500 Internal Server Error
+  C:/Ruby/projects/mebay/config/routes.rb:41: syntax error, unexpected ':', expecting kEND
+  map.connect '/ads/:id,' :controller=>'ads', :action=> 'show'
+                           ^
+C:/Ruby/projects/mebay/config/routes.rb:41: syntax error, unexpected ',', expecting kEND
+  map.connect '/ads/:id,' :controller=>'ads', :action=> 'show'
+                                             ^
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:145:in `load_without_new_constant_marking'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:145:in `load'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:145:in `load'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:286:in `load_routes!'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:286:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:286:in `load_routes!'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:266:in `load!'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:281:in `reload'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:59:in `reload_application'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:8:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-27 10:44:36) [GET]
+
+ActionController::RoutingError (No route matches "/ads/3" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-27 10:44:37) [GET]
+
+ActionController::RoutingError (No route matches "/ads/3" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 10:47:20) [GET]
+  Parameters: {"id"=>"3"}
+Rendering ads/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/3]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 10:48:21) [GET]
+  Parameters: {"id"=>"5"}
+Rendering ads/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/5]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 10:55:22) [GET]
+  Parameters: {"id"=>"5"}
+Rendering ads/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #3 of app/views/ads/show.html.erb:
+1: <html>
+2: <head>
+3: 	<title> <%= @ad.name %></title>
+4: </head>
+5: <body>
+6: 	<p>
+
+    app/views/ads/show.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 10:55:27) [GET]
+  Parameters: {"id"=>"3"}
+Rendering ads/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #3 of app/views/ads/show.html.erb:
+1: <html>
+2: <head>
+3: 	<title> <%= @ad.name %></title>
+4: </head>
+5: <body>
+6: 	<p>
+
+    app/views/ads/show.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 10:59:58) [GET]
+  Parameters: {"id"=>"3"}
+Rendering ads/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #3 of app/views/ads/show.html.erb:
+1: <html>
+2: <head>
+3: 	<title> <%= @ad.name %></title>
+4: </head>
+5: <body>
+6: 	<p>
+
+    app/views/ads/show.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 11:00:00) [GET]
+  Parameters: {"id"=>"3"}
+Rendering ads/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #3 of app/views/ads/show.html.erb:
+1: <html>
+2: <head>
+3: 	<title> <%= @ad.name %></title>
+4: </head>
+5: <body>
+6: 	<p>
+
+    app/views/ads/show.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 11:03:53) [GET]
+  Parameters: {"id"=>"3"}
+Rendering ads/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #3 of app/views/ads/show.html.erb:
+1: <html>
+2: <head>
+3: 	<title> <%= @ad.name %></title>
+4: </head>
+5: <body>
+6: 	<p>
+
+    app/views/ads/show.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 11:12:19) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 3) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=3):
+  app/controllers/ads_controller.rb:3:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 11:13:51) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 3) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=3):
+  app/controllers/ads_controller.rb:3:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 11:15:36) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 3) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=3):
+  app/controllers/ads_controller.rb:3:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 11:15:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 2) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=2):
+  app/controllers/ads_controller.rb:3:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 11:32:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 2) [0m
+Rendering ads/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/2]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 11:32:31) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 3) [0m
+Rendering ads/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/3]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 11:33:07) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 5) [0m
+Rendering ads/show
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/5]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 11:39:11) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 5) [0m
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/ads/5]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 11:39:26) [GET]
+  Parameters: {"id"=>"53"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 53) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=53):
+  app/controllers/ads_controller.rb:3:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (62.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 11:39:29) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 3) [0m
+Rendering ads/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/ads/3]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 11:46:32) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 5) [0m
+Rendering ads/show
+Completed in 32ms (View: 0, DB: 0) | 200 OK [http://localhost/ads/5]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 11:46:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 2) [0m
+Rendering ads/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/ads/2]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 17:52:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering ads/show
+Completed in 110ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/ads/1]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 17:52:21) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Ad without an ID):
+  app/controllers/ads_controller.rb:3:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 17:52:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 2) [0m
+Rendering ads/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/2]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 17:52:31) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 3) [0m
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/3]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 17:52:42) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 4) [0m
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/4]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 17:52:48) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 6) [0m
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/6]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 17:52:53) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 7) [0m
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/7]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 17:52:57) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 8) [0m
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/8]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 17:53:02) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 9) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=9):
+  app/controllers/ads_controller.rb:3:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 17:53:18) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Ad without an ID):
+  app/controllers/ads_controller.rb:3:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (124.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 17:53:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/1]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 21:48:59) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 3) [0m
+Rendering ads/show
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://127.0.0.1/ads/3]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 21:49:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering ads/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/1]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 21:49:19) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 2) [0m
+Rendering ads/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/2]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 21:49:57) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 4) [0m
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/4]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 21:50:00) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 5) [0m
+Rendering ads/show
+Completed in 32ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/5]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 21:51:00) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 6) [0m
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/6]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-07-27 22:07:12) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 7) [0m
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/7]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:36:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 2) [0m
+Rendering ads/show
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/ads/2]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:39:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 2) [0m
+Rendering ads/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/2]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:39:28) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=index):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:39:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering ads/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/1]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:39:39) [GET]
+  Parameters: {"id"=>"0"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=0):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:45:02) [GET]
+  Parameters: {"id"=>"0"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=0):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:45:08) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=index):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:45:40) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=index):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:49:36) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=index):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:49:40) [GET]
+  Parameters: {"id"=>"index"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=index):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 13:49:44) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering ads/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:49:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering ads/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/1]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 13:49:51) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:49:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 2) [0m
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/2]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 13:49:53) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:49:54) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 3) [0m
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/3]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 13:49:56) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering ads/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:49:57) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 4) [0m
+Rendering ads/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/4]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 13:49:58) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering ads/index
+Completed in 125ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:50:00) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 5) [0m
+Rendering ads/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/5]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 13:50:01) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:50:02) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 6) [0m
+Rendering ads/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/6]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 13:50:03) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering ads/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:50:04) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 7) [0m
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/7]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 13:50:06) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:50:07) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 8) [0m
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/8]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 13:50:08) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering ads/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:50:09) [GET]
+  Parameters: {"id"=>"37"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 37) [0m
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/37]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 13:50:11) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 13:56:27) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 13:56:30) [GET]
+  [4;36;1mAd Load (15.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering ads/index
+Completed in 15ms (View: 0, DB: 15) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 13:57:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering ads/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/1]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 13:57:54) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 13:57:56) [GET]
+  [4;35;1mAd Load (15.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 15) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:08:39) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:08:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAd Load (16.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 32ms (View: 0, DB: 16) | 200 OK [http://127.0.0.1/ads/1]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:08:59) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:09:01) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 2) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/2]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:09:03) [GET]
+  [4;36;1mAd Load (16.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:09:04) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 3) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/3]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:09:09) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:09:11) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 4) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/4]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:09:13) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:09:14) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 5) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/5]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:09:16) [GET]
+  [4;36;1mAd Load (15.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 15ms (View: 0, DB: 15) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:09:17) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 6) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/6]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:09:18) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:09:20) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 7) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/7]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:09:21) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:09:22) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 8) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/8]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:09:24) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:09:25) [GET]
+  Parameters: {"id"=>"37"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 37) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 32ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/37]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:09:27) [GET]
+  [4;36;1mAd Load (15.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 15ms (View: 0, DB: 15) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:10:50) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:10:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/1]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:12:44) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:12:45) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 3) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/3]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:12:48) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:12:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/1]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:12:52) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:12:53) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 3) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/3]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:12:58) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:25:06) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:25:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/1]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:25:10) [GET]
+  [4;36;1mAd Load (16.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:25:11) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 3) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/3]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:25:12) [GET]
+  [4;36;1mAd Load (16.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:25:32) [GET]
+  Parameters: {"id"=>"new"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=new):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:27:29) [GET]
+  Parameters: {"id"=>"new"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=new):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:27:31) [GET]
+  Parameters: {"id"=>"new"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=new):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:29:56) [GET]
+  Parameters: {"id"=>"new"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=new):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:29:58) [GET]
+  Parameters: {"id"=>"new"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=new):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:30:00) [GET]
+  Parameters: {"id"=>"new"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=new):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:30:03) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:30:10) [GET]
+  Parameters: {"id"=>"new"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=new):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:30:19) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:32:10) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:32:54) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:34:00) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:34:08) [GET]
+  Parameters: {"id"=>"new"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=new):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:41:55) [GET]
+  Parameters: {"id"=>"new"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=new):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:41:58) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:42:01) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 3) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/3]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:42:04) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:42:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 78ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/1]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:42:07) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:42:08) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 2) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/2]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:42:09) [GET]
+  [4;35;1mAd Load (47.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 63ms (View: 0, DB: 47) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:42:10) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 3) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/3]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:42:12) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:42:13) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 4) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 32ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/4]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:42:15) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:42:16) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 5) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/5]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:42:18) [GET]
+  [4;35;1mAd Load (16.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:42:20) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 7) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/7]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:42:21) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 14:42:22) [GET]
+  Parameters: {"id"=>"37"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 37) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/37]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 14:42:24) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:02:10) [GET]
+  Parameters: {"id"=>"new"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=new):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:14:20) [GET]
+  Parameters: {"id"=>"new"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=new):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:14:26) [GET]
+  Parameters: {"id"=>"new"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=new):
+  app/controllers/ads_controller.rb:7:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#new (for 127.0.0.1 at 2009-08-09 15:18:08) [GET]
+Rendering template within layouts/ads
+Rendering ads/new
+Completed in 827ms (View: 811, DB: 0) | 200 OK [http://127.0.0.1/ads/new]
+
+
+Processing AdsController#new (for 127.0.0.1 at 2009-08-09 15:18:34) [GET]
+Rendering template within layouts/ads
+Rendering ads/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/new]
+
+
+Processing AdsController#create (for 127.0.0.1 at 2009-08-09 15:20:05) [POST]
+  Parameters: {"commit"=>"Create", "ad"=>{"name"=>""}, "authenticity_token"=>"b5soJbYIH+DGcMhjJ7j6bNJAY226qaSr3j/qKd3BDiY="}
+
+ActionController::UnknownAction (No action responded to create. Actions: index, new, and show):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#new (for 127.0.0.1 at 2009-08-09 15:20:07) [GET]
+Rendering template within layouts/ads
+Rendering ads/new
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/new]
+
+
+Processing AdsController#new (for 127.0.0.1 at 2009-08-09 15:21:48) [GET]
+Rendering template within layouts/ads
+Rendering ads/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/new]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-08-09 15:25:12) [GET]
+
+SyntaxError (C:/Ruby/projects/mebay/app/controllers/ads_controller.rb:7: syntax error, unexpected ')', expecting kEND):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (124.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#new (for 127.0.0.1 at 2009-08-09 15:26:23) [GET]
+Rendering template within layouts/ads
+Rendering ads/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/new]
+
+
+Processing AdsController#create (for 127.0.0.1 at 2009-08-09 15:26:26) [POST]
+  Parameters: {"commit"=>"Create", "ad"=>{"name"=>""}, "authenticity_token"=>"b5soJbYIH+DGcMhjJ7j6bNJAY226qaSr3j/qKd3BDiY="}
+  [4;35;1mAd Create (16.0ms)[0m   [0mINSERT INTO "ads" ("name", "updated_at", "price", "description", "img_url", "seller_id", "email", "created_at") VALUES('', '2009-08-09 07:26:26', NULL, NULL, NULL, NULL, NULL, '2009-08-09 07:26:26')[0m
+
+ActionView::MissingTemplate (Missing template ads/create.erb in view path app/views):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#new (for 127.0.0.1 at 2009-08-09 15:26:30) [GET]
+Rendering template within layouts/ads
+Rendering ads/new
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/new]
+
+
+Processing AdsController#new (for 127.0.0.1 at 2009-08-09 15:28:03) [GET]
+Rendering template within layouts/ads
+Rendering ads/new
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/new]
+
+
+Processing AdsController#new (for 127.0.0.1 at 2009-08-09 15:28:31) [GET]
+Rendering template within layouts/ads
+Rendering ads/new
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/new]
+
+
+Processing AdsController#new (for 127.0.0.1 at 2009-08-09 15:28:32) [GET]
+Rendering template within layouts/ads
+Rendering ads/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/new]
+
+
+Processing AdsController#new (for 127.0.0.1 at 2009-08-09 15:29:30) [GET]
+Rendering template within layouts/ads
+Rendering ads/new
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/ads/new]
+
+
+Processing AdsController#create (for 127.0.0.1 at 2009-08-09 15:30:12) [POST]
+  Parameters: {"commit"=>"Create", "ad"=>{"name"=>"", "price"=>"", "description"=>"", "img_url"=>"", "seller_id"=>"", "email"=>""}, "authenticity_token"=>"b5soJbYIH+DGcMhjJ7j6bNJAY226qaSr3j/qKd3BDiY="}
+  [4;36;1mAd Create (0.0ms)[0m   [0;1mINSERT INTO "ads" ("name", "updated_at", "price", "description", "img_url", "seller_id", "email", "created_at") VALUES('', '2009-08-09 07:30:12', NULL, '', '', NULL, '', '2009-08-09 07:30:12')[0m
+
+ActionView::MissingTemplate (Missing template ads/create.erb in view path app/views):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#new (for 127.0.0.1 at 2009-08-09 15:34:07) [GET]
+Rendering template within layouts/ads
+Rendering ads/new
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/new]
+
+
+Processing AdsController#create (for 127.0.0.1 at 2009-08-09 15:34:48) [POST]
+  Parameters: {"commit"=>"Create", "ad"=>{"name"=>"JAJAN", "price"=>"RM10.00", "description"=>"Selling junk foods \"JAJAN\"", "img_url"=>"", "seller_id"=>"Syidah", "email"=>"aznor98@yahoo.com"}, "authenticity_token"=>"b5soJbYIH+DGcMhjJ7j6bNJAY226qaSr3j/qKd3BDiY="}
+  [4;35;1mAd Create (15.0ms)[0m   [0mINSERT INTO "ads" ("name", "updated_at", "price", "description", "img_url", "seller_id", "email", "created_at") VALUES('JAJAN', '2009-08-09 07:34:48', 0.0, 'Selling junk foods "JAJAN"', '', 0, 'aznor98@yahoo.com', '2009-08-09 07:34:48')[0m
+Rendering template within layouts/ads
+Rendering ads/create
+Completed in 47ms (View: 16, DB: 15) | 200 OK [http://127.0.0.1/ads/create]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:34:49) [GET]
+  Parameters: {"id"=>"40"}
+  [4;36;1mAd Load (15.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 15) | 200 OK [http://127.0.0.1/ads/40]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:34:50) [GET]
+  [4;35;1mAd Load (15.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 15ms (View: 0, DB: 15) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:36:52) [GET]
+  [4;36;1mAd Load (15.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 15ms (View: 0, DB: 15) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:36:57) [GET]
+  Parameters: {"id"=>"40"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/40]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:36:57) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#new (for 127.0.0.1 at 2009-08-09 15:37:03) [GET]
+Rendering template within layouts/ads
+Rendering ads/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/new]
+
+
+Processing AdsController#create (for 127.0.0.1 at 2009-08-09 15:37:24) [POST]
+  Parameters: {"commit"=>"Create", "ad"=>{"name"=>"sayang", "price"=>"69000", "description"=>"daffksdfkdslfd;lk", "img_url"=>"", "seller_id"=>"hdsmnmm", "email"=>"asadjd@skddsk.com"}, "authenticity_token"=>"b5soJbYIH+DGcMhjJ7j6bNJAY226qaSr3j/qKd3BDiY="}
+  [4;35;1mAd Create (16.0ms)[0m   [0mINSERT INTO "ads" ("name", "updated_at", "price", "description", "img_url", "seller_id", "email", "created_at") VALUES('sayang', '2009-08-09 07:37:24', 69000.0, 'daffksdfkdslfd;lk', '', 0, 'asadjd@skddsk.com', '2009-08-09 07:37:24')[0m
+Redirected to http://127.0.0.1:3000/ads/41
+Completed in 31ms (DB: 16) | 302 Found [http://127.0.0.1/ads/create]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:37:24) [GET]
+  Parameters: {"id"=>"41"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:37:24) [GET]
+  [4;35;1mAd Load (16.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:39:55) [GET]
+  Parameters: {"id"=>"41"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:39:55) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController# 41 (for 127.0.0.1 at 2009-08-09 15:39:57) [GET]
+  Parameters: {"id"=>"edit"}
+
+ActionController::UnknownAction (No action responded to  41. Actions: create, index, new, and show):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:40:00) [GET]
+  Parameters: {"id"=>"41"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:40:00) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 15:47:00) [GET]
+  Parameters: {"id"=>" 41"}
+Rendering template within layouts/ads
+Rendering ads/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #1 of app/views/ads/edit.html.erb:
+1: <h1>Editing<%= @ad.name %> </h1>
+2: <% form_for(@ad, :url=>{action=>'update'}) do |f| %>
+3: 	<p><b>Name</b><br /><%= f.text_field :name %></p>
+4: 	<p><b>Description</b><br /><%= f.text_area :description %></p>
+
+    app/views/ads/edit.html.erb:1
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:47:01) [GET]
+  Parameters: {"id"=>"41"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:47:02) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:47:02) [GET]
+  Parameters: {"id"=>"41"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:47:03) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 15:47:04) [GET]
+  Parameters: {"id"=>" 41"}
+Rendering template within layouts/ads
+Rendering ads/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #1 of app/views/ads/edit.html.erb:
+1: <h1>Editing<%= @ad.name %> </h1>
+2: <% form_for(@ad, :url=>{action=>'update'}) do |f| %>
+3: 	<p><b>Name</b><br /><%= f.text_field :name %></p>
+4: 	<p><b>Description</b><br /><%= f.text_area :description %></p>
+
+    app/views/ads/edit.html.erb:1
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:49:55) [GET]
+  Parameters: {"id"=>"41"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:49:55) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 15:49:57) [GET]
+  Parameters: {"id"=>" 41"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+
+ActionView::TemplateError (undefined local variable or method `action' for #<ActionView::Base:0x48cba50>) on line #2 of app/views/ads/edit.html.erb:
+1: <h1>Editing<%= @ad.name %> </h1>
+2: <% form_for(@ad, :url=>{action=>'update'}) do |f| %>
+3: 	<p><b>Name</b><br /><%= f.text_field :name %></p>
+4: 	<p><b>Description</b><br /><%= f.text_area :description %></p>
+5: 	<p><b>Price</b><br /><%= f.text_field :price %></p>
+
+    app/views/ads/edit.html.erb:2
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 15:50:00) [GET]
+  Parameters: {"id"=>" 41"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+
+ActionView::TemplateError (undefined local variable or method `action' for #<ActionView::Base:0x594ae08>) on line #2 of app/views/ads/edit.html.erb:
+1: <h1>Editing<%= @ad.name %> </h1>
+2: <% form_for(@ad, :url=>{action=>'update'}) do |f| %>
+3: 	<p><b>Name</b><br /><%= f.text_field :name %></p>
+4: 	<p><b>Description</b><br /><%= f.text_area :description %></p>
+5: 	<p><b>Price</b><br /><%= f.text_field :price %></p>
+
+    app/views/ads/edit.html.erb:2
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:50:06) [GET]
+  Parameters: {"id"=>" 41"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/%2041/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:50:13) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:50:14) [GET]
+  Parameters: {"id"=>"40"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/40]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:50:15) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 15:50:16) [GET]
+  Parameters: {"id"=>" 40"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+
+ActionView::TemplateError (undefined local variable or method `action' for #<ActionView::Base:0x5878778>) on line #2 of app/views/ads/edit.html.erb:
+1: <h1>Editing<%= @ad.name %> </h1>
+2: <% form_for(@ad, :url=>{action=>'update'}) do |f| %>
+3: 	<p><b>Name</b><br /><%= f.text_field :name %></p>
+4: 	<p><b>Description</b><br /><%= f.text_area :description %></p>
+5: 	<p><b>Price</b><br /><%= f.text_field :price %></p>
+
+    app/views/ads/edit.html.erb:2
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:50:18) [GET]
+  Parameters: {"id"=>"40"}
+  [4;35;1mAd Load (16.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://127.0.0.1/ads/40]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:50:18) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:50:20) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:50:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/1]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 15:50:22) [GET]
+  Parameters: {"id"=>" 1"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+
+ActionView::TemplateError (undefined local variable or method `action' for #<ActionView::Base:0x48c0dbc>) on line #2 of app/views/ads/edit.html.erb:
+1: <h1>Editing<%= @ad.name %> </h1>
+2: <% form_for(@ad, :url=>{action=>'update'}) do |f| %>
+3: 	<p><b>Name</b><br /><%= f.text_field :name %></p>
+4: 	<p><b>Description</b><br /><%= f.text_area :description %></p>
+5: 	<p><b>Price</b><br /><%= f.text_field :price %></p>
+
+    app/views/ads/edit.html.erb:2
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 15:51:41) [GET]
+  Parameters: {"id"=>" 1"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+
+ActionView::TemplateError (undefined local variable or method `action' for #<ActionView::Base:0x59106b8>) on line #2 of app/views/ads/edit.html.erb:
+1: <h1>Editing<%= @ad.name %> </h1>
+2: <% form_for(@ad, :url=>{action=>'update'}) do |f| %>
+3: 	<p><b>Name</b><br /><%= f.text_field :name %></p>
+4: 	<p><b>Description</b><br /><%= f.text_area :description %></p>
+5: 	<p><b>Price</b><br /><%= f.text_field :price %></p>
+
+    app/views/ads/edit.html.erb:2
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:54:40) [GET]
+  Parameters: {"id"=>" 1"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/%201/]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 15:54:44) [GET]
+  Parameters: {"id"=>" 1"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+
+ActionView::TemplateError (undefined local variable or method `action' for #<ActionView::Base:0x59ca1a8>) on line #2 of app/views/ads/edit.html.erb:
+1: <h1>Editing<%= @ad.name %> </h1>
+2: <% form_for(@ad, :url=>{action=>'update'}) do |f| %>
+3: 	<p><b>Name</b><br /><%= f.text_field :name %></p>
+4: 	<p><b>Description</b><br /><%= f.text_area :description %></p>
+5: 	<p><b>Price</b><br /><%= f.text_field :price %></p>
+
+    app/views/ads/edit.html.erb:2
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (140.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:54:47) [GET]
+  Parameters: {"id"=>" 1"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/%201/]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 15:54:47) [GET]
+  Parameters: {"id"=>" 1"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+
+ActionView::TemplateError (undefined local variable or method `action' for #<ActionView::Base:0x5b27460>) on line #2 of app/views/ads/edit.html.erb:
+1: <h1>Editing<%= @ad.name %> </h1>
+2: <% form_for(@ad, :url=>{action=>'update'}) do |f| %>
+3: 	<p><b>Name</b><br /><%= f.text_field :name %></p>
+4: 	<p><b>Description</b><br /><%= f.text_area :description %></p>
+5: 	<p><b>Price</b><br /><%= f.text_field :price %></p>
+
+    app/views/ads/edit.html.erb:2
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:54:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/1]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:54:49) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 93ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:54:49) [GET]
+  Parameters: {"id"=>" 41"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/%2041/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:54:50) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:54:53) [GET]
+  [4;35;1mAd Load (16.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://127.0.0.1/ads]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:54:56) [GET]
+  Parameters: {"id"=>"40"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/40]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:54:56) [GET]
+  [4;35;1mAd Load (15.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 15ms (View: 0, DB: 15) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 15:54:58) [GET]
+  Parameters: {"id"=>" 40"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+
+ActionView::TemplateError (undefined local variable or method `action' for #<ActionView::Base:0x5873d68>) on line #2 of app/views/ads/edit.html.erb:
+1: <h1>Editing<%= @ad.name %> </h1>
+2: <% form_for(@ad, :url=>{action=>'update'}) do |f| %>
+3: 	<p><b>Name</b><br /><%= f.text_field :name %></p>
+4: 	<p><b>Description</b><br /><%= f.text_area :description %></p>
+5: 	<p><b>Price</b><br /><%= f.text_field :price %></p>
+
+    app/views/ads/edit.html.erb:2
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (124.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:55:07) [GET]
+  Parameters: {"id"=>"40"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/40]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:55:07) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 15:56:33) [GET]
+  Parameters: {"id"=>" 40"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/%2040/edit]
+
+
+Processing AdsController#update (for 127.0.0.1 at 2009-08-09 15:56:40) [PUT]
+  Parameters: {"commit"=>"Update", "ad"=>{"name"=>"JAJAN", "price"=>"20", "description"=>"Selling junk foods \"JAJAN\"", "img_url"=>"", "seller_id"=>"34", "email"=>"aznor98@yahoo.com"}, "authenticity_token"=>"b5soJbYIH+DGcMhjJ7j6bNJAY226qaSr3j/qKd3BDiY=", "id"=>" 40"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+  [4;35;1mAd Update (0.0ms)[0m   [0mUPDATE "ads" SET "seller_id" = 34, "price" = 20.0, "updated_at" = '2009-08-09 07:56:40' WHERE "id" = 40[0m
+Redirected to http://127.0.0.1:3000/ads/40
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/ads/%2040/update]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:56:40) [GET]
+  Parameters: {"id"=>"40"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/ads/40]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:56:40) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:56:47) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:56:53) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 7) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/7]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 15:56:55) [GET]
+  Parameters: {"id"=>" 7"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 7) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/%207/edit]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:57:05) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:57:08) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 8) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/8]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 15:57:11) [GET]
+  Parameters: {"id"=>" 8"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 8) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/%208/edit]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:57:16) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 8) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 78ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/8]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:57:19) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:57:21) [GET]
+  Parameters: {"id"=>"41"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 15:57:21) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 15:57:22) [GET]
+  Parameters: {"id"=>" 41"}
+  [4;36;1mAd Load (16.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+Completed in 46ms (View: 15, DB: 16) | 200 OK [http://127.0.0.1/ads/%2041/edit]
+
+
+Processing AdsController#update (for 127.0.0.1 at 2009-08-09 15:57:27) [PUT]
+  Parameters: {"commit"=>"Update", "ad"=>{"name"=>"sayang", "price"=>"69000", "description"=>"daffksdfkdslfd;lk", "img_url"=>"hgghgfhgf", "seller_id"=>"0", "email"=>"asadjd@skddsk.com"}, "authenticity_token"=>"b5soJbYIH+DGcMhjJ7j6bNJAY226qaSr3j/qKd3BDiY=", "id"=>" 41"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+  [4;36;1mAd Update (0.0ms)[0m   [0;1mUPDATE "ads" SET "updated_at" = '2009-08-09 07:57:27', "img_url" = 'hgghgfhgf' WHERE "id" = 41[0m
+Redirected to http://127.0.0.1:3000/ads/41
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/ads/%2041/update]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:57:27) [GET]
+  Parameters: {"id"=>"41"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 15:57:27) [GET]
+  Parameters: {"id"=>"hgghgfhgf"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=hgghgfhgf):
+  app/controllers/ads_controller.rb:23:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:01:27) [GET]
+  Parameters: {"id"=>"41"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:01:27) [GET]
+  Parameters: {"id"=>"hgghgfhgf"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=hgghgfhgf):
+  app/controllers/ads_controller.rb:25:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 16:01:28) [GET]
+  Parameters: {"id"=>" 41"}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 0ms (View: 0, DB: 0) | 401 Unauthorized [http://127.0.0.1/ads/%2041/edit]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 16:01:36) [GET]
+  Parameters: {"id"=>" 41"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/%2041/edit]
+
+
+Processing AdsController#update (for 127.0.0.1 at 2009-08-09 16:01:44) [PUT]
+  Parameters: {"commit"=>"Update", "ad"=>{"name"=>"sayang", "price"=>"69000", "description"=>"daffksdfkdslfd;lk", "img_url"=>"hgghgfhgf", "seller_id"=>"454", "email"=>"asadjd@skddsk.com"}, "authenticity_token"=>"b5soJbYIH+DGcMhjJ7j6bNJAY226qaSr3j/qKd3BDiY=", "id"=>" 41"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+  [4;35;1mAd Update (0.0ms)[0m   [0mUPDATE "ads" SET "seller_id" = 454, "updated_at" = '2009-08-09 08:01:44' WHERE "id" = 41[0m
+Redirected to http://127.0.0.1:3000/ads/41
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/ads/%2041/update]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:01:44) [GET]
+  Parameters: {"id"=>"41"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:01:45) [GET]
+  Parameters: {"id"=>"hgghgfhgf"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=hgghgfhgf):
+  app/controllers/ads_controller.rb:25:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 16:01:47) [GET]
+  Parameters: {"id"=>" 41"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/%2041/edit]
+
+
+Processing AdsController#update (for 127.0.0.1 at 2009-08-09 16:01:50) [PUT]
+  Parameters: {"commit"=>"Update", "ad"=>{"name"=>"sayang", "price"=>"69000", "description"=>"daffksdfkdslfd;lk", "img_url"=>"hgghgfhgf", "seller_id"=>"454", "email"=>"asadjd@skddsk.com"}, "authenticity_token"=>"b5soJbYIH+DGcMhjJ7j6bNJAY226qaSr3j/qKd3BDiY=", "id"=>" 41"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Redirected to http://127.0.0.1:3000/ads/41
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/ads/%2041/update]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:01:50) [GET]
+  Parameters: {"id"=>"41"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:01:50) [GET]
+  Parameters: {"id"=>"hgghgfhgf"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=hgghgfhgf):
+  app/controllers/ads_controller.rb:25:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 16:01:56) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:01:58) [GET]
+  Parameters: {"id"=>"40"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/40]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 16:01:58) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 93ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 16:01:59) [GET]
+  Parameters: {"id"=>" 40"}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 0ms (View: 0, DB: 0) | 401 Unauthorized [http://127.0.0.1/ads/%2040/edit]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 16:02:00) [GET]
+  Parameters: {"id"=>" 40"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/%2040/edit]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:02:02) [GET]
+  Parameters: {"id"=>"40"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/40]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 16:02:03) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 16:07:23) [GET]
+  Parameters: {"id"=>" 40"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/%2040/edit]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 16:07:25) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#destroy (for 127.0.0.1 at 2009-08-09 16:07:28) [GET]
+  Parameters: {"id"=>"38 "}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 0ms (View: 0, DB: 0) | 401 Unauthorized [http://127.0.0.1/ads/38%20/delete]
+
+
+Processing AdsController#destroy (for 127.0.0.1 at 2009-08-09 16:07:28) [GET]
+  Parameters: {"id"=>"38 "}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 38) [0m
+  [4;35;1mAd Destroy (0.0ms)[0m   [0mDELETE FROM "ads" WHERE "id" = 38[0m
+Redirected to http://127.0.0.1:3000/ads/
+Completed in 46ms (DB: 0) | 302 Found [http://127.0.0.1/ads/38%20/delete]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 16:07:28) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#destroy (for 127.0.0.1 at 2009-08-09 16:07:30) [GET]
+  Parameters: {"id"=>"39 "}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 15ms (View: 0, DB: 0) | 401 Unauthorized [http://127.0.0.1/ads/39%20/delete]
+
+
+Processing AdsController#destroy (for 127.0.0.1 at 2009-08-09 16:07:30) [GET]
+  Parameters: {"id"=>"39 "}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 39) [0m
+  [4;36;1mAd Destroy (0.0ms)[0m   [0;1mDELETE FROM "ads" WHERE "id" = 39[0m
+Redirected to http://127.0.0.1:3000/ads/
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/ads/39%20/delete]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 16:07:30) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:07:36) [GET]
+  Parameters: {"id"=>"40"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/40]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 16:07:36) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 16:07:38) [GET]
+  Parameters: {"id"=>" 40"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/%2040/edit]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:07:42) [GET]
+  Parameters: {"id"=>"40"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/40]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 16:07:42) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#destroy (for 127.0.0.1 at 2009-08-09 16:07:44) [GET]
+  Parameters: {"id"=>"40 "}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 0ms (View: 0, DB: 0) | 401 Unauthorized [http://127.0.0.1/ads/40%20/delete]
+
+
+Processing AdsController#destroy (for 127.0.0.1 at 2009-08-09 16:07:44) [GET]
+  Parameters: {"id"=>"40 "}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 40) [0m
+  [4;36;1mAd Destroy (0.0ms)[0m   [0;1mDELETE FROM "ads" WHERE "id" = 40[0m
+Redirected to http://127.0.0.1:3000/ads/
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/ads/40%20/delete]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 16:07:45) [GET]
+  [4;35;1mAd Load (16.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:08:15) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 8) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/8]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 16:08:16) [GET]
+  Parameters: {"id"=>" 8"}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 0ms (View: 0, DB: 0) | 401 Unauthorized [http://127.0.0.1/ads/%208/edit]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 16:08:16) [GET]
+  Parameters: {"id"=>" 8"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 8) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/%208/edit]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:08:18) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 8) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/8]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 16:08:52) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:08:53) [GET]
+  Parameters: {"id"=>"41"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:08:53) [GET]
+  Parameters: {"id"=>"hgghgfhgf"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=hgghgfhgf):
+  app/controllers/ads_controller.rb:25:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 16:08:54) [GET]
+  Parameters: {"id"=>" 41"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/%2041/edit]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 16:10:07) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:10:10) [GET]
+  Parameters: {"id"=>"37"}
+  [4;36;1mAd Load (16.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 37) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://127.0.0.1/ads/37]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 16:10:11) [GET]
+  Parameters: {"id"=>" 37"}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 15ms (View: 0, DB: 0) | 401 Unauthorized [http://127.0.0.1/ads/%2037/edit]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 16:10:11) [GET]
+  Parameters: {"id"=>" 37"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 37) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/ads/%2037/edit]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 16:11:45) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:11:47) [GET]
+  Parameters: {"id"=>"41"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:11:47) [GET]
+  Parameters: {"id"=>"hgghgfhgf"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=hgghgfhgf):
+  app/controllers/ads_controller.rb:25:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 16:11:59) [GET]
+  [4;35;1mAd Load (15.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 31ms (View: 0, DB: 15) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:12:00) [GET]
+  Parameters: {"id"=>"41"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:12:00) [GET]
+  Parameters: {"id"=>"hgghgfhgf"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=hgghgfhgf):
+  app/controllers/ads_controller.rb:25:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 16:13:45) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:13:46) [GET]
+  Parameters: {"id"=>"41"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 78ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:13:46) [GET]
+  Parameters: {"id"=>"hgghgfhgf"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=hgghgfhgf):
+  app/controllers/ads_controller.rb:26:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 16:13:47) [GET]
+  Parameters: {"id"=>" 41"}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 0ms (View: 0, DB: 0) | 401 Unauthorized [http://127.0.0.1/ads/%2041/edit]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:14:12) [GET]
+  Parameters: {"id"=>"41"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:14:12) [GET]
+  Parameters: {"id"=>"hgghgfhgf"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=hgghgfhgf):
+  app/controllers/ads_controller.rb:26:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 16:14:14) [GET]
+  Parameters: {"id"=>" 41"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/%2041/edit]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 16:14:16) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:14:17) [GET]
+  Parameters: {"id"=>"41"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:14:17) [GET]
+  Parameters: {"id"=>"hgghgfhgf"}
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=hgghgfhgf):
+  app/controllers/ads_controller.rb:26:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 16:14:18) [GET]
+  Parameters: {"id"=>" 41"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/%2041/edit]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2009-08-09 16:15:18) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:15:21) [GET]
+  Parameters: {"id"=>"41"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/41]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2009-08-09 16:15:21) [GET]
+  Parameters: {"id"=>"hgghgfhgf"}
+  [4;36;1mAd Load (16.0ms)[0m   [0;1mSELECT * FROM "ads" WHERE ("ads"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ad with ID=hgghgfhgf):
+  app/controllers/ads_controller.rb:26:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2009-08-09 16:15:22) [GET]
+  Parameters: {"id"=>" 41"}
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 41) [0m
+Rendering template within layouts/ads
+Rendering ads/edit
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/ads/%2041/edit]

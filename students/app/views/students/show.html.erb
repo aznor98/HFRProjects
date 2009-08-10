@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @student.name %>
+</p>
+
+<p>
+  <b>Matric:</b>
+  <%=h @student.Matric %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @student.Email %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>

@@ -1,0 +1,36 @@
+<h2><b>Kemaskini Tempahan Tiket</b></h2>
+
+<% form_for(@ticket) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Nama %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :No_Kerusi %><br />
+    <%= f.text_field :seat_id %>
+  </p>
+  <p>
+    <%= f.label :Alamat %><br />
+    <%= f.text_area :address %>
+  </p>
+  <p>
+    <%= f.label :Harga %><br />
+    <%= f.text_field :price %>
+  </p>
+  <p>
+    <%= f.label :Emel %><br />
+    <%= f.text_field :email %>
+  </p>
+<p>
+    <%= f.label :Telefon %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.submit 'Kemaskini' %>
+  </p>
+<% end %>
+
+<%= link_to 'Tunjukkan', @ticket %> |
+<%= link_to 'Kembali', tickets_path %>

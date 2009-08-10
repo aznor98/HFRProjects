@@ -1,0 +1,30 @@
+<h2><b>Senarai Tiket Yang Ditempah</b></h2>
+
+<table>
+  <tr>
+    <th>Nama</th>
+    <th>No_Kerusi</th>
+    <th>Alamat</th>
+    <th>Harga</th>
+    <th>Emel</th>
+    <th>Telefon</th>
+  </tr>
+
+<% @tickets.each do |ticket| %>
+  <tr>
+    <td><%=h ticket.name %></td>
+    <td><%=h ticket.seat_id %></td>
+    <td><%=h ticket.address %></td>
+    <td><%=h ticket.price %></td>
+    <td><%=h ticket.email %></td>
+    <td><%=h ticket.phone %></td>
+    <td><%= link_to 'Tunjukkan', ticket %></td>
+    <td><%= link_to 'Kemaskini', edit_ticket_path(ticket) %></td>
+    <td><%= link_to 'Hapuskan', ticket, :confirm => 'Anda pasti?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Tiket Baru', new_ticket_path %>

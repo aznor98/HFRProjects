@@ -1,0 +1,32 @@
+<p>
+  <b>Nama:</b>
+  <%=h @ticket.name %>
+</p>
+
+<p>
+  <b>No. Kerusi:</b>
+  <%=h @ticket.seat_id %>
+</p>
+
+<p>
+  <b>Alamat:</b>
+  <%=h @ticket.address %>
+</p>
+
+<p>
+  <b>Harga:</b>
+  <%=h @ticket.price %>
+</p>
+
+<p>
+  <b>Emel:</b>
+  <%=h @ticket.email %>
+</p>
+<p>
+  <b>Telefon:</b>
+  <%=h @ticket.phone %>
+</p>
+
+
+<%= link_to 'Kemaskini', edit_ticket_path(@ticket) %> |
+<%= link_to 'Kembali', tickets_path %>

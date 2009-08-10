@@ -1,0 +1,448 @@
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 19:22:50) [GET]
+
+ActionController::RoutingError (No route matches "/tickets" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTickets (20090720112539)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "tickets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "seat_id" varchar(255), "address" text, "price" decimal, "email" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090720112539')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tickets")[0m
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:26:00) [GET]
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 2746ms (View: 2730, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2009-07-20 19:26:05) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/tickets/new]
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2009-07-20 19:27:01) [POST]
+  Parameters: {"ticket"=>{"name"=>"Abi", "price"=>"30.00", "seat_id"=>"1A", "address"=>"No.5, Persiaran 1, Taman Rashidah Utama,\r\nBangi, Selangor", "email"=>"abi@sajjja.com"}, "commit"=>"Create", "authenticity_token"=>"l0UZ6BKESudSnMOXbPxB+bjKdgIlyzAQrY6l/8ppxUw="}
+  [4;35;1mTicket Create (0.0ms)[0m   [0mINSERT INTO "tickets" ("name", "updated_at", "price", "seat_id", "address", "email", "created_at") VALUES('Abi', '2009-07-20 11:27:01', 30.0, '1A', 'No.5, Persiaran 1, Taman Rashidah Utama,
+Bangi, Selangor', 'abi@sajjja.com', '2009-07-20 11:27:01')[0m
+Redirected to http://127.0.0.1:3000/tickets/1
+Completed in 203ms (DB: 0) | 302 Found [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2009-07-20 19:27:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+Rendering template within layouts/tickets
+Rendering tickets/show
+Completed in 93ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/tickets/1]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:27:03) [GET]
+  [4;35;1mTicket Load (0.0ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:33:53) [GET]
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:34:10) [GET]
+  [4;35;1mTicket Load (0.0ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2009-07-20 19:34:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+Rendering template within layouts/tickets
+Rendering tickets/show
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/tickets/1]
+
+
+Processing TicketsController#edit (for 127.0.0.1 at 2009-07-20 19:34:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTicket Load (16.0ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+Rendering template within layouts/tickets
+Rendering tickets/edit
+Completed in 31ms (View: 15, DB: 16) | 200 OK [http://127.0.0.1/tickets/1/edit]
+
+
+Processing TicketsController#update (for 127.0.0.1 at 2009-07-20 19:34:23) [PUT]
+  Parameters: {"ticket"=>{"name"=>"Abi", "price"=>"30", "seat_id"=>"1A", "address"=>"No.5, Persiaran 1, Taman Rashidah Utama,\r\nBangi, Selangor", "email"=>"abi@sajjja.com"}, "commit"=>"Kemaskini", "authenticity_token"=>"l0UZ6BKESudSnMOXbPxB+bjKdgIlyzAQrY6l/8ppxUw=", "id"=>"1"}
+  [4;36;1mTicket Load (16.0ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+Redirected to http://127.0.0.1:3000/tickets/1
+Completed in 31ms (DB: 16) | 302 Found [http://127.0.0.1/tickets/1]
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2009-07-20 19:34:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTicket Load (0.0ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+Rendering template within layouts/tickets
+Rendering tickets/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/tickets/1]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:34:27) [GET]
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:35:18) [GET]
+  [4;35;1mTicket Load (0.0ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2009-07-20 19:35:22) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/tickets/new]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:35:25) [GET]
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2009-07-20 19:35:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTicket Load (0.0ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+Rendering template within layouts/tickets
+Rendering tickets/show
+Completed in 46ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/tickets/1]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:35:29) [GET]
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#edit (for 127.0.0.1 at 2009-07-20 19:35:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTicket Load (0.0ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+Rendering template within layouts/tickets
+Rendering tickets/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/tickets/1/edit]
+
+
+Processing TicketsController#update (for 127.0.0.1 at 2009-07-20 19:35:32) [PUT]
+  Parameters: {"ticket"=>{"name"=>"Abi", "price"=>"30", "seat_id"=>"1A", "address"=>"No.5, Persiaran 1, Taman Rashidah Utama,\r\nBangi, Selangor", "email"=>"abi@sajjja.com"}, "commit"=>"Kemaskini", "authenticity_token"=>"l0UZ6BKESudSnMOXbPxB+bjKdgIlyzAQrY6l/8ppxUw=", "id"=>"1"}
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+Redirected to http://127.0.0.1:3000/tickets/1
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/tickets/1]
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2009-07-20 19:35:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTicket Load (0.0ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+Rendering template within layouts/tickets
+Rendering tickets/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/tickets/1]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:35:37) [GET]
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2009-07-20 19:35:42) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2009-07-20 19:36:51) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://127.0.0.1/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2009-07-20 19:36:53) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/tickets/new]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:36:56) [GET]
+  [4;35;1mTicket Load (0.0ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:37:51) [GET]
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:37:53) [GET]
+  [4;35;1mTicket Load (0.0ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:38:25) [GET]
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:38:27) [GET]
+  [4;35;1mTicket Load (0.0ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTickets (20090720112539)
+Migrating to AddPhoneToTickets (20090720114339)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "tickets" ADD "phone" varchar(255)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090720114339')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tickets")[0m
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:46:40) [GET]
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 125ms (View: 109, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2009-07-20 19:46:43) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/tickets/new]
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2009-07-20 19:46:49) [POST]
+  Parameters: {"ticket"=>{"name"=>"", "price"=>"", "seat_id"=>"", "phone"=>"", "address"=>"", "email"=>""}, "commit"=>"Cipta Rekod", "authenticity_token"=>"l0UZ6BKESudSnMOXbPxB+bjKdgIlyzAQrY6l/8ppxUw="}
+  [4;35;1mTicket Create (0.0ms)[0m   [0mINSERT INTO "tickets" ("name", "updated_at", "price", "seat_id", "phone", "address", "email", "created_at") VALUES('', '2009-07-20 11:46:49', NULL, '', '', '', '', '2009-07-20 11:46:49')[0m
+Redirected to http://127.0.0.1:3000/tickets/2
+Completed in 47ms (DB: 0) | 302 Found [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2009-07-20 19:46:49) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mTicket Load (15.0ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 2) [0m
+Rendering template within layouts/tickets
+Rendering tickets/show
+Completed in 15ms (View: 0, DB: 15) | 200 OK [http://127.0.0.1/tickets/2]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:46:52) [GET]
+  [4;35;1mTicket Load (0.0ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#destroy (for 127.0.0.1 at 2009-07-20 19:46:56) [DELETE]
+  Parameters: {"authenticity_token"=>"l0UZ6BKESudSnMOXbPxB+bjKdgIlyzAQrY6l/8ppxUw=", "id"=>"2"}
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 2) [0m
+  [4;35;1mTicket Destroy (0.0ms)[0m   [0mDELETE FROM "tickets" WHERE "id" = 2[0m
+Redirected to http://127.0.0.1:3000/tickets
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/tickets/2]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:46:56) [GET]
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#edit (for 127.0.0.1 at 2009-07-20 19:46:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTicket Load (0.0ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+Rendering template within layouts/tickets
+Rendering tickets/edit
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/tickets/1/edit]
+
+
+Processing TicketsController#update (for 127.0.0.1 at 2009-07-20 19:47:12) [PUT]
+  Parameters: {"ticket"=>{"name"=>"Abi", "price"=>"30", "seat_id"=>"1A", "phone"=>"0388905860", "address"=>"No.5, Persiaran 1, Taman Rashidah Utama,\r\nBangi, Selangor", "email"=>"abi@sajjja.com"}, "commit"=>"Kemaskini", "authenticity_token"=>"l0UZ6BKESudSnMOXbPxB+bjKdgIlyzAQrY6l/8ppxUw=", "id"=>"1"}
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;35;1mTicket Update (0.0ms)[0m   [0mUPDATE "tickets" SET "phone" = '0388905860', "updated_at" = '2009-07-20 11:47:12' WHERE "id" = 1[0m
+Redirected to http://127.0.0.1:3000/tickets/1
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/tickets/1]
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2009-07-20 19:47:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+Rendering template within layouts/tickets
+Rendering tickets/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/tickets/1]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-20 19:47:14) [GET]
+  [4;35;1mTicket Load (0.0ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-27 10:11:34) [GET]
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 2839ms (View: 2808, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-27 10:13:53) [GET]
+  [4;35;1mTicket Load (0.0ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+
+ActionView::TemplateError (undefined method `telefon' for #<Ticket:0x5992000>) on line #20 of app/views/tickets/index.html.erb:
+17:     <td><%=h ticket.address %></td>
+18:     <td><%=h ticket.price %></td>
+19:     <td><%=h ticket.email %></td>
+20:     <td><%=h ticket.telefon %></td>
+21:     <td><%= link_to 'Tunjukkan', ticket %></td>
+22:     <td><%= link_to 'Kemaskini', edit_ticket_path(ticket) %></td>
+23:     <td><%= link_to 'Hapuskan', ticket, :confirm => 'Anda pasti?', :method => :delete %></td>
+
+    app/views/tickets/index.html.erb:20
+    app/views/tickets/index.html.erb:13:in `each'
+    app/views/tickets/index.html.erb:13
+    app/controllers/tickets_controller.rb:7:in `index'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2009-07-27 10:14:34) [GET]
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-27 10:22:31) [GET]
+
+ActionController::RoutingError (No route matches "/mebay" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-27 10:23:56) [GET]
+
+ActionController::RoutingError (No route matches "/mebay" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-27 10:24:01) [GET]
+
+ActionController::RoutingError (No route matches "/mebay" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
